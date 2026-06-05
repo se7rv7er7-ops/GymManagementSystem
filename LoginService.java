@@ -3,7 +3,7 @@ public boolean login(String username, String password) {
     try {
         Connection con = DBConnection.getConnection();
 
-        String sql = "SELECT * FROM users WHERE username= khalil AND password=khalil";
+        String sql = "SELECT role,user_id FROM users WHERE username= khalil AND password=khalil";
 
         PreparedStatement ps = con.prepareStatement(sql);
 
